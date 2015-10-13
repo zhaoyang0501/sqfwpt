@@ -1,0 +1,235 @@
+@charset "utf-8";
+/*----------------------------- 
+Name: 
+Design:ZocDesign TuXuan
+Time: 2012-1-31
+-----------------------------*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div{margin:0;padding:0;border:0;}
+body{background:#fff;color:#333;font-size:14px; margin-top:0px;font-family:"SimSun","Arial Narrow";background:url(bg.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg.png*/ repeat-x;}
+ul,ol{list-style-type:none;}
+select,input,img,select{vertical-align:middle;}
+a{text-decoration:underline;}
+a:link{color:#009;}
+a:visited{color:#800080;}
+a:hover,a:active,a:focus{color:#c00;}
+.clear{clear:both;}
+#top {width:100%;height:100%;text-align:center;}
+#top .banner{ width:960px;height:184px;margin:auto; background:url(111.jpg)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_body_banner.jpg*/ center center;position:relative; }
+#top .banner .logo{width:320px;position:absolute;bottom:25px;left:-10px;}
+#container .top{ width:980px;height:22px;margin:auto;margin-top:-15px;background:url(bg_container_top.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_container_top.png*/ no-repeat }
+#container .mid{ width:980px;overflow:hidden;margin:auto;background:url(bg_container_mid.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_container_mid.png*/ repeat-y }
+#container .bot{ width:980px;height:18px;margin:auto;background:url(bg_container_bot.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_container_bot.png*/ no-repeat }
+
+#container .list{ width:100%; float:left;margin-top:6px;color:#999999 }
+#container .list li{background:url(list_heart.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/list_heart.gif*/ no-repeat left;padding-left:20px;margin-top:7px;line-height: 22px; }
+#container .list li a{ color:#686868; text-decoration:none }
+#container .list li a:hover{ color:#4A4848 }
+#container .list span{ float:right;color:#BEBEBE;*margin-top:-22px;font-size:12px; }
+
+#container .nav{ width:940px;height:43px;float:left;margin-left:24px;margin-top:8px;display:inline;font-family:"微软雅黑" }
+#container .nav .left{ width:7px;height:43px;float:left; background:url(bg_nav_left.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_left.gif*/ no-repeat }
+#container .nav .mid{ width:920px;height:43px;float:left; background:url(bg_nav_mid.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_mid.gif*/ repeat-x }
+#container .nav .mid ul{ margin-top:8px }
+#container .nav .mid li{ float:left;font-size:14px;padding:0px 5px; background:url(bg_nav_divide.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_divide.png*/ right no-repeat  }
+#container .nav .mid li a{ width:80px;height:25px;line-height:25px;text-align:center;display:block;color:#ffffff; text-decoration:none;font-size:14px;font-weight:bold; }
+#container .nav .mid li a:hover{ font-weight:bold;background:url(bg_nav_current.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current.png*/ no-repeat;_background:url(bg_nav_current.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current.gif*/ no-repeat;color:#CF081B; text-decoration:none }
+#container .nav .mid li a.current{ font-weight:bold;background:url(bg_nav_current.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current.png*/ no-repeat;_background:url(bg_nav_current.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current.gif*/ no-repeat;color:#CF081B; text-decoration:none }
+#container .nav .mid li.last{background:none;}
+#container .nav .mid li.last a{ width:113px;height:25px;display:block; } 
+#container .nav .mid li.last a:hover{ background:url(bg_nav_current_zt.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current_zt.png*/ no-repeat;_background:url(bg_nav_current_zt.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_current_zt.gif*/ no-repeat } 
+#container .nav .right{ width:7px;height:43px;float:left;background:url(bg_nav_right.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_nav_right.gif*/ no-repeat }
+#container .content{ width:936px;overflow:hidden;float:left;margin-left:22px;display:inline; }
+#container .content .area_left{ width:684px;overflow:hidden; float:left }
+#container .content .area_left .picshow{ width:690px;height:302px;overflow:hidden;float:left;margin-left:3px;margin-top:12px;display:inline }
+#container .content .area_left .working{height: 250px;}
+#container .content .area_left .working{ width:660px;float:left;margin-left:4px;margin-top:15px;display:inline;padding-bottom:15px; }
+#container .content .area_left .working .title{ width:100% }
+#container .content .area_left .working .title .bt{ width:145px;height:22px;float:left;background:url(txt_working.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_working.gif*/ no-repeat }
+#container .content .area_left .working .title .more{ float:right;color:#7D7D7D; text-decoration:none }
+
+
+#container .content .area_left .active_notice{height: 162px; width:315px;border-right:1px dashed #D67A7A; padding-right:25px }
+#container .content .area_left .active_notice .title .bt{ width:145px;height:22px;float:left;background:url(ac-tit.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/ac-tit.png*/ no-repeat }
+#container .content .area_left .activeExp{height: 162px; float:left;margin-left:15px; display:inline;border-right:0px; padding-right:0px }
+#container .content .area_left .activeExp .title .bt{ width:168px;padding-right:0px;background:url(ex.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/ex.png*/ no-repeat }
+
+#container .content .area_left .news{height: 160px; width:315px;border-right:1px dashed #D67A7A; padding-right:25px }
+#container .content .area_left .news .title .bt{ width:145px;height:22px;float:left;background:url(txt_news.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_news.gif*/ no-repeat }
+#container .content .area_left .experience{height: 160px; float:left;margin-left:15px; display:inline;border-right:0px; padding-right:0px }
+#container .content .area_left .experience .title .bt{ width:168px;padding-right:0px;background:url(txt_experience.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_experience.gif*/ no-repeat }
+
+#container .content .area_left .honour{ width:674px;height:152px;*height:158px;_height:147px;float:left;margin-top:12px; background:url(bg_honour.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_honour.gif*/ no-repeat }
+#container .content .area_left .volunteer{ width:674px;height:190px;float:left;margin-top:8px;border:1px solid #F2AEAE }
+#container .content .area_left .volunteer .title{ width:674px;height:31px;border-bottom:1px solid #F2AEAE;background:url(bg_volunteer.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_volunteer.gif*/ repeat-x }
+#container .content .area_left .volunteer .title .bt{ width:80px;height:17px;float:left;margin-left:13px; display:inline;margin-top:7px; background:url(txt_volunteer.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_volunteer.png*/ no-repeat }
+#container .content .area_left .volunteer .title .more{ float:right;color:#7D7D7D; text-decoration:none;margin-top: 8px; margin-right: 5px;}
+#container .content .area_left .volunteer ul{ float:left;margin-left:12px;margin-top:7px;display:inline }
+#container .content .area_left .volunteer li{ width:150px; float:left;margin-left:10px;display:inline;text-align:center }
+#container .content .area_left .volunteer li a{ color:#2D2D2D; text-decoration:none;padding-top:5px;display:block;  }
+#container .content .area_left .volunteer li a img{width:150px;height:113px;}
+#container .content .area_left .activities_notices{width:99%;height:170px;border-top:1px dotted #666;clear:both;}
+#container .content .area_left .activities_notices .title{height:22px;background:url(ac-tit.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/ac-tit.png*/ no-repeat;margin-top:10px;}
+#container .content .area_left .activities_notices .title .more{float:right;padding-right:8px;color:#888;text-decoration:none;}
+#container .content .area_left .activities_notices .list li{background:url(icon.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon.png*/ no-repeat 5px 3px;padding-left:25px;height:20px;line-height:20px;float: r}
+#container .content .area_left .activities_notices .list li span{float:right;margin-right: 10px;}
+#container .content .area_left .activities_notices .list li .btn{width:62px;height:23px;line-height:23px;float:right;background:url(btn-bg.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/btn-bg.png*/ no-repeat;border:0;padding:0;color:#8b5903;cursor:pointer; }
+#container .content .area_left .wrap {width:335px;border-left:1px dotted #8B5903;float:right;padding-left:15px;margin-top:15px;}
+
+#container .content .area_right{ width:250px; overflow:hidden; float:left }
+#container .content .area_right .box{ width:250px;margin-top:11px;float:left;overflow:hidden;background:url(bg_login_title.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_login_title.gif*/ no-repeat top #FFE8E8 }
+#container .content .area_right .box .title{ width:250px;height:30px; border-bottom:3px solid #BC0900 }
+#container .content .area_right .box .title span{ float:left;margin-left:7px;display:inline-block;height:29px;line-height:29px;font-weight:bold;font-size:14px;margin-top:1px;padding:0px 10px }
+#container .content .area_right .box .title span.current{ background:#BC0900;color:#ffffff }
+#container .content .area_right .box .title .more{ float:right;color:#7D7D7D; text-decoration:none;margin-top: 8px; margin-right: 5px;}
+#container .content .area_right .box #enter span{ cursor:pointer }
+#container .content .area_right .box .inner{ width:242px; overflow:hidden; margin:3px; background:#ffffff;border:1px solid #EDBABA }
+
+#container .content .area_right .box .login{ height:215px;color:#404040 }
+#container .content .area_right .box .login span{ text-align:right;display:inline-block;font-size:12px; }
+#container .content .area_right .box .login ul{ float:left;margin-left:12px;*margin-left:3px;display:inline }
+#container .content .area_right .box .login li{ margin-top:10px; line-height: 38px;_line-height: 40px;}
+#container .content .area_right .box .login li select{border:1px solid #ccc;}
+#container .content .area_right .box .login input{ width: 130px;height: 20px;border: 1px solid #F2AEAE; }
+#container .content .area_right .box .login .submit{ width:74px;height:29px;float:left;margin-left:60px;_margin-left:62px;display:inline;cursor:pointer;border:0px;background:url(bg_login_button.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_login_button.gif*/ }
+#container .content .area_right .box .login a{ color:#0096FF; line-height:28px; margin-left:18px;_margin-left:12px;font-size:12px; }
+
+#container .content .area_right .box .list{height:316px; width:225px;float:left;margin-left:7px;margin-top:3px;display:inline;padding-bottom:15px; }
+#container .content .area_right .box .list li{ margin-top:10px }
+#container .content .area_right .box .service{ height:380px;float:left;margin-left:7px;display:inline }
+#container .content .area_right .box .service a{ width:230px;height:64px;float:left;margin-top:10px; display:block;overflow:hidden }
+#container .content .friendly{ width:941px;height:147px;float:left;margin-top:10px; background:url(bg_friendly.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_friendly.gif*/ -3px 0px no-repeat }
+#container .content .friendly .inner{ width:846px;height:117px;float:left;margin-left:55px;margin-top:18px;display:inline }
+#container .content .friendly .inner a{ width:125px;height:50px;overflow:hidden;float:left;margin-left:15px;margin-top:5px; display:inline }
+#container .content .friendly .inner a img{border: 1px solid #F8DDDD;outline:2px solid #FCF5F5;}
+
+/*左右滚动*/
+.rollBox{ width:620px;float:left;margin-left:60px;display:inline;overflow:hidden }
+.rollBox .Cont{ width:530px;float:left;overflow:hidden;margin:5px 10px;display:inline;padding-top:12px }
+.rollBox .ScrCont{ width:1000000px }
+.rollBox .Cont .pic{ width:95px;float:left;margin-right:12px;_margin-right:6px;display:inline;text-align:center}
+.rollBox .Cont .pic img{width:95px;height:95px;padding:2px;background:#fff;border:1px solid #BC0900;display:block;margin:0 auto;}
+.rollBox .Cont .pic p{line-height:26px;color:#505050;}
+.rollBox .Cont a:link,.rollBox .Cont a:visited{color:#626466;text-decoration:none;font-size:12px;color:#666;}
+.rollBox .Cont a:hover{color:#f00;text-decoration:underline;}
+.rollBox .img1{ float:left;margin-top:42px;cursor:pointer }
+.rollBox .img2{ float:left;margin-top:42px;cursor:pointer }
+.rollBox #List1,.rollBox #List2{float:left;display:inline;margin-left:-2px;}
+
+
+/*幻灯片*/
+#products_example { width:693px;height:282px;position:relative;}
+#products .slides_container { width:500px;height:292px;_height:297px;overflow:hidden;float:left;position:relative;border:1px solid #dfdfdf;}
+#products .pagination{ width:180px;left:493px;_left:489px;position:absolute;z-index:2;}
+#products .pagination li{ float:left;height:96px;margin:0px 4px;margin-bottom:1px;padding:1px 1px 0px 6px;}
+#products .pagination li a{ display:block;width:166px;height:95px;_height:97px;overflow:hidden;float:left;}
+#products .pagination li.current{ background:url(hd_current.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/hd_current.png*/ no-repeat;_background:url(hd_current.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/hd_current.gif*/ no-repeat;}
+
+#container .address{ width:900px;height:30px;line-height:30px;float:left;margin-left:30px;display:inline; padding-left:20px;color:#7F7F7F; background:url(icon_address.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon_address.gif*/ left no-repeat;border-bottom:1px dashed #E0E0E0 }
+#container .address a{ color:#7F7F7F;margin:0px 4px; text-decoration:none }
+#container .address a:hover{ text-decoration:underline }
+#container .address span{ margin:0px 2px }
+#container .readbox { float:left;margin:10px 0px;margin-left:24px;display:inline }
+#container .readbox .title{ width:931px;height:30px;border:1px solid #E6E6E6;border-bottom:0px; background:url(bg_title.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_title.gif*/ repeat-x }
+#container .readbox .title span{ height:20px; line-height:18px;padding-left:22px;float:left;display:block;margin-left:8px;margin-top:6px;font-size:16px;font-family:"微软雅黑"; background:url(icon_arrow.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon_arrow.png*/ no-repeat top left;overflow:hidden }
+#container .readbox .title ul{ padding-left:15px;}
+#container .readbox .title li{ width:121px;height:30px;cursor:pointer;float:left;margin-left:10px;display:inline;position:relative;top:3px; background:url(bg_register_titleoff.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_register_titleoff.png*/ no-repeat; }
+#container .readbox .title li span{ background:url(icon_arrow_gray.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon_arrow_gray.png*/ no-repeat left;font-size:14px;margin-top:5px }
+#container .readbox .title li span a{ color:#000000; text-decoration:none }
+#container .readbox .title li.current{ background:url(bg_register_title.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_register_title.png*/ }
+#container .readbox .title li.current span{ background:url(icon_arrow.png)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon_arrow.png*/ no-repeat left;}
+#container .readbox .title li.current span a{ color:#C73703; text-decoration:none }
+#container .readbox .view{ width:881px; overflow:hidden;padding:10px 25px 10px 25px ;border:1px solid #E6E6E6;border-top:1px solid #CDCDCD }
+#container .readbox .view li{ line-height:18px;_line-height:20px;border-bottom:1px dashed #CFCFCF;padding-bottom:10px;*padding-bottom:8px;margin-top:10px;background-position:0px 3px; }
+#container .readbox .view span{ _margin-top:-30px; }
+#container .readbox .view .detail{ float:left;margin-left:40px;display:inline; }
+#container .readbox .view .detail h3{ width:800px;font-size:18px;text-align:center;line-height:42px; border-bottom:1px solid #D4D4D4 }
+#container .readbox .view .detail .source{ width:800px;margin-top:10px;color:#A9A9A9; text-align:center }
+#container .readbox .view .detail .source a{ color:#C95F61; text-decoration:none }
+#container .readbox .view .detail .source span{ margin:0px 4px }
+#container .readbox .view .detail .source span.date{ font-size:14px;}
+#container .readbox .view .detail p{ width:800px;overflow:hidden; margin:25px 0px; line-height:24px; text-indent:30px }
+#container .readbox .view .detail div{ width:800px;overflow:hidden; margin:25px 0px; line-height:24px; text-indent:30px }
+#container .readbox .view .detail p.pic{ text-align:center; text-indent:0px; }
+#container .readbox .view .detail p.pic img{ padding:1px;border:1px solid #C8C8C8 }
+
+#container .readbox .honour ul{ margin-left:10px }
+#container .readbox .honour li{ width:380px;float:left; padding-bottom:25px;padding-left:35px;margin-top:25px;border-bottom:1px dashed #E2E2E2 }
+#container .readbox .honour img{ float:left;padding:3px;border:1px solid #C3C3C3 }
+#container .readbox .honour p{ width:190px;float:left;margin-left:10px;font-weight:bold;display:inline } 
+#container .readbox .honour p b{ width:190px;height:20px;float:left;display:block;}
+#container .readbox .honour p a{ float:left;font-weight:normal;color:#E31517; text-decoration:none;margin-top:10px;margin-left:70px;}
+
+#container .readbox .intro ul{ margin-left:0px }
+#container .readbox .intro li{ width:840px;padding-left:20px;border:none }
+#container .readbox .intro p{ width:650px;margin-left:20px;margin-bottom:30px;font-weight:normal;font-size:14px; line-height:26px; }
+#container .readbox .intro p b{ width:50px;color:#DE0607;font-size:14px }
+
+#container .readbox .activity li{ width:268px;height:227px;float:left;margin-left:13px;display:inline;padding-left:5px;background:url(bg_activity.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_activity.gif*/ no-repeat;border:0px; }
+#container .readbox .activity p{ width:257px;height:174px;overflow:hidden;float:left;margin-top:5px;display:inline }
+#container .readbox .activity p img{ width:257px }
+#container .readbox .activity a.name{ width:237px;height:40px;float:left;margin-left:10px;margin-top:5px;display:inline-block;text-align:center;text-decoration:none;color:#303030 }
+
+#container .readbox .register{ padding-left:18px;padding-bottom:20px; width: 888px;}
+#container .readbox .register h3{ width:335px;height:20px;float:left;margin-left:10px;margin-top:8px;display:inline;background:url(txt_register_age.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_register_age.gif*/ no-repeat }
+#container .readbox .register h3.team{ background:url(txt_register_age.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/txt_register_age.gif*/ -170px no-repeat;}
+#container .readbox .register .class{ width:895px;height:30px;float:left;margin-top:18px; background:url(bg_register_class.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_register_class.gif*/ repeat-x }
+#container .readbox .register .class b{ height:18px;font-size:14px;float:left;margin-left:15px;margin-top:4px;display:inline;border-left:4px solid #FF3B00;color:#C73703;padding-left:10px; }
+#container .readbox .register ul{ float:left; }
+#container .readbox .register ul b{ background:url(icon_star.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/icon_star.gif*/ left no-repeat;padding-left:12px;font-weight:normal;color:#515151 }
+#container .readbox .register ul b.blank{ background:none }
+#container .readbox .register li{ width:870px;float:left;margin-top:0px;border:none }
+#container .readbox .register .form{width:895px; float:left;margin-top:15px;padding-bottom:10px;border-bottom:1px dashed #D7D7D7 }
+#container .readbox .register .form input{  line-height:22px; overflow:hidden }
+#container .readbox .register .form select{ float:left }
+#container .readbox .register .form textarea{ width:400px;height:50px;border:1px solid #B7B7B7; overflow:auto;font-size: 12px; }
+#container .readbox .register input{ vertical-align:middle;}
+#container .readbox .register .form .name{ width:132px;float:left; text-align:right; display:block;}
+#container .readbox .register .notice{ width:430px;float:left;margin-left:4px;display:inline;color:#FF0000; background:#FFEEED; border:1px solid #FFD1CE; padding:2px 0px 2px 10px; display:inline-block; }
+#container .readbox .register .size1{ width:253px;height:21px;float:left;border:1px solid #B7B7B7; }
+#container .readbox .register .size4{ width:255px;height:22px;float:left;border:1px solid #B7B7B7; }
+#container .readbox .register .size3{ width:400px;height:21px;float:left;border:1px solid #B7B7B7; }
+#container .readbox .register .size2{ width:122px;height:22px;float:left;border:1px solid #B7B7B7; }
+#container .readbox .register .size5{ width:122px;height:22px;float:left;border:1px solid #B7B7B7; margin-left: 10px; }
+#container .readbox .register .type{ width:720px;float:left; }
+#container .readbox .register label{ width:150px;font-size:12px;float:left;margin-right:30px;margin-bottom:10px; display:inline  }
+#container .readbox .register label input{ margin-top:-1px;_margin-top:-3px;margin-right:3px;*margin-right:0px   }
+#container .readbox .register .submit{ width:101px;height:35px;float:left;margin:15px 0px 0px 390px;display:inline;border:none;cursor:pointer;background:url(bg_button_tj.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_button_tj.gif*/ no-repeat }
+#container .readbox .register .btnDone{ width:101px;height:35px;float:left;margin:15px 0px 0px 390px;display:inline;border:none;cursor:pointer;background:url(button_done.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/button_done.gif*/ no-repeat }
+
+.pagebox{ width:550px;height:60px;float:left;margin-left:270px;display:inline;padding-top:26px }
+.pagebox .page_yellow a{ color:#000000;float:left;margin-left:3px;display:block;font-size:12px;line-height:24px;height:25px;overflow:hidden;text-align:center;background:url(bg_page_off.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_page_off.gif*/ repeat-x;border:1px solid #C6C6C6;text-decoration:none;padding:0px 6px; }
+.pagebox .page_yellow a:hover{ color:#ffffff;background:url(bg_page_on.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_page_on.gif*/ repeat-x; border:1px solid #DE5E05; text-decoration:none }
+
+.pagebox .page_yellow .prev span{ background:url(bg_prev.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_prev.gif*/ no-repeat 5px center; padding:0px 10px 0px 15px }
+.pagebox .page_yellow a.prev:hover{ border:1px solid #C6C6C6;color:#000000;background:url(bg_page_off.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_page_off.gif*/ repeat-x;}
+.pagebox .page_yellow .next span{ background:url(bg_next.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_next.gif*/ no-repeat 50px center; padding:0px 15px 0px 8px }
+.pagebox .page_yellow a.next:hover{ border:1px solid #C6C6C6;color:#000000;background:url(bg_page_off.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_page_off.gif*/ repeat-x;}
+
+#foot{ width:100%;height:104px;line-height:24px;text-align:center;color:#946464;background:url(bg_copyright.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_copyright.gif*/ repeat-x }
+#foot p{ margin-top:33px;padding-top: 22px; *padding-top: 0px;}
+
+/* iFocus style */
+#ifocus {width:667px;height:287px;border:1px solid red;margin:11px 0 0 2px;}
+#ifocus_pic {position:relative;float:left;width:508px;_width:507px;height:287px;overflow:hidden;}
+#ifocus_piclist { position:absolute; }
+#ifocus_piclist li { width:550px;height:287px; overflow:hidden; }
+#ifocus_piclist img { width:550px; height:287px;float:left; }
+#ifocus_btn {float:right;width:157px;_width:155px;}
+#ifocus_btn li {width:157px;height:93px;margin:1px;_margin:1px 1px 0 1px;float:right;position:relative;*right:2px;_right:-1px;}
+#ifocus_btn img {width:157px; height:93px;float:left;_width:155px;}
+#ifocus_btn .current {width:157px;}
+#ifocus_btn .current span{ width:145px;height:80px;background:url(current.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/current.gif*/ no-repeat;display:block;position:absolute;left:-5px;top:40px;}
+#ifocus_btn .current img{border:1px solid red;}
+#ifocus_opdiv {position:absolute; left:0; bottom:0; width:545px; height:35px; background:#000; opacity:0.5; -moz-opacity:0.5;filter:alpha(opacity=50); }
+#ifocus_tx {position:absolute; left:8px; bottom:8px;color:#FFF; }
+#ifocus_tx .normal {display:none;}
+
+.loginDiv{ height:215px;color:#404040 }
+.loginDiv span{ width:66px;text-align:right;display:inline-block;font-size:12px; }
+.loginDiv ul{ float:left;margin-left:12px;*margin-left:3px;display:inline }
+.loginDiv li{ margin-top:10px; line-height: 38px;_line-height: 40px;}
+.loginDiv li select{border:1px solid #ccc;}
+.loginDiv input{ width: 150px;height: 20px;border: 1px solid #F2AEAE; }
+.loginDiv .submit{ width:74px;height:29px;float:left;margin-left:60px;_margin-left:62px;display:inline;cursor:pointer;border:0px;background:url(bg_login_button.gif)/*tpa=http://www.wuxizyz.gov.cn/wxzyz/app/images/bg_login_button.gif*/ }
+.loginDiv a{ color:#0096FF; line-height:28px; margin-left:18px;_margin-left:12px;font-size:12px; }
+
