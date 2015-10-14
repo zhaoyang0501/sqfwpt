@@ -74,7 +74,7 @@
 									<option value="3">计生工作</option>
 									<option value="4">宣传报道</option>
 									<option value="5">社区党建</option>
-									<option value="6">社区治安</option>
+									<option value="6">社区服务</option>
 									<option value="7">社区医疗</option>
 									</select>
 								</div>

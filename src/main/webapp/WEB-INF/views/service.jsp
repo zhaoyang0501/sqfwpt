@@ -8,11 +8,11 @@
 <script language="javaScript" type="text/javascript" src="js/jquery.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link type="text/css" rel="stylesheet" href="css/pagination_new.css" />
-		<title></title>
+	<title></title>
 		<link type="text/css" rel="stylesheet" href="pagination_new.css"  />
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$("#_introduction").addClass("current");
+				$("#_service").addClass("current");
 				if("${tip}" != null && "${tip}" != ""){
 					alert("${tip}");
 				}
@@ -39,15 +39,15 @@
 			</div>
 			<!-- 面包屑 -->
 			<div class="address">
-				目前位置：<a href="" >首页</a><span>></span><span>宣传公告</span>
+				目前位置：<a href="" >首页</a><span>></span><span>社区服务</span>
 			</div>
 			<!-- 正文 -->
 			<div class="readbox">
-				<div class="title"><span>新闻动态</span></div>
+				<div class="title"><span>社区服务</span></div>
 				<div class="view">
 					<div class="list" id="dataList">
 						<ul>
-						<c:forEach items="${newss}" var="bean">
+						<c:forEach items="${services}" var="bean">
 						<li><a href="detail?id=${bean.id}" target="_blank">${bean.title}</a><span>${bean.createDate}</span></li>
 						</c:forEach>
 						</ul>

@@ -16,7 +16,9 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
+import com.pzy.entity.Family;
 import com.pzy.entity.Worker;
+import com.pzy.repository.FamilyRepository;
 import com.pzy.repository.WorkerRepository;
 /***
  * 
@@ -27,6 +29,9 @@ import com.pzy.repository.WorkerRepository;
 public class WorkerService {
      @Autowired
      private WorkerRepository workerRepository;
+     
+     @Autowired
+     private FamilyRepository familyRepository;
      public List<Worker> findAll() {
           return (List<Worker>) workerRepository.findAll();
      }
@@ -55,6 +60,10 @@ public class WorkerService {
      public void save(Worker Worker){
     	 workerRepository.save(Worker);
      }
+     public List<Family> findByWorker(Worker worker){
+    	 return this.familyRepository.findByWorker(worker);
+     }
+     
      public Worker login(String adminUserName,String password){
     	 List<Worker> adminUsers=workerRepository.findByUsernameAndPassword(adminUserName, password);
     	 return adminUsers.size()==0?null:adminUsers.get(0);

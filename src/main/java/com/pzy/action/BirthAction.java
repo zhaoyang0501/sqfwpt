@@ -14,18 +14,18 @@ import com.pzy.service.NewsService;
 
 @Namespace("/")
 @ParentPackage("json-default") 
-public class NoticeAction extends PageAction {
+public class BirthAction extends PageAction {
 	
 	private Integer page=1;
 	
-	private List<News> newss;
+	private List<News> births;
 	@Autowired
 	private NewsService newsService;
 
-	@Action(value = "notice", results = { @Result(name = "success", location = "/WEB-INF/views/notice.jsp") })
+	@Action(value = "birth", results = { @Result(name = "success", location = "/WEB-INF/views/birth.jsp") })
 	public String notice() {
-		Page<News> list = newsService.findAll(page, 15,2);
-		newss=list.getContent();
+		Page<News> list = newsService.findAll(page, 15,3);
+		births=list.getContent();
 		return SUCCESS;
 	}
 	public Integer getPage() {
@@ -34,14 +34,10 @@ public class NoticeAction extends PageAction {
 	public void setPage(Integer page) {
 		this.page = page;
 	}
-
-
-
-	public List<News> getNewss() {
-		return newss;
+	public List<News> getBirths() {
+		return births;
 	}
-
-	public void setNewss(List<News> newss) {
-		this.newss = newss;
+	public void setBirths(List<News> births) {
+		this.births = births;
 	}
 }

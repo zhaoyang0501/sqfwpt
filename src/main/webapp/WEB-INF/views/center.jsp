@@ -8,7 +8,7 @@
 <script language="javaScript" type="text/javascript" src="js/jquery.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link type="text/css" rel="stylesheet" href="css/pagination_new.css" />
-		<title>无锡商院大学生青年志愿者总会</title>
+		<title></title>
 		<link type="text/css" rel="stylesheet" href="pagination_new.css"  />
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -158,6 +158,41 @@
 							</div>
 							<input type="submit"  value="保存修改" style="margin: 15px 0px 0px 390px;"/>
 						</form>
+							
+							<div class="class">
+								<b>我的家庭信息</b>
+							</div>
+							<div class="form">
+							<a href="family"  style="margin-bottom: 30px;;float: right">新增家庭成员</a>
+								<table cellpadding="0" cellspacing="0" style="margin-top: 20px;margin-bottom: 20px;width: 100%">
+									<thead>
+										<tr style="background-color: #FBE6E5;">
+											<th height="30" class="td_style1 td_style2 td_style3">姓名</th>
+											<th  class="td_style1 td_style2">出生日期</th>
+											<th  class="td_style1 td_style2">身份证号码</th>
+											<th  class="td_style1 td_style2">性别</th>
+											<th class="td_style1 td_style2">与户主关系</th>
+											<th class="td_style1 td_style2">出生地址</th>
+											<th class="td_style1 td_style2">籍贯</th>
+											<th class="td_style1 td_style2">删除</th>
+										</tr>
+									</thead>
+									<tbody id="activity_list">
+									<c:forEach items="${familys}" var="bean">
+									<tr>
+										  <td height="30" class="td_style1 td_style3">${bean.name }</td>
+										  <td align="center" class="td_style1"><fmt:formatDate value="${bean.birthDate}" pattern="G yyyy年MM月dd日 E"/> </td>
+										  <td align="center" class="td_style1">${bean.cardid }</td>
+										  <td align="center" class="td_style1">${bean.sex }</td>
+										  <td align="center" class="td_style1">${bean.relation }</td>
+										    <td align="center" class="td_style1">${bean.addr }</td>
+										      <td align="center" class="td_style1">${bean.place }</td>
+										  <td align="center" class="td_style1"><a href="projectdetail?id=${bean.id }">删除</a> </td>
+										</tr>
+									</c:forEach>
+									</tbody>
+								</table>
+							</div>
 							
 							<div class="class">
 								<b>我的参与的活动</b>

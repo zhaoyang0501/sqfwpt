@@ -9,6 +9,7 @@ import org.apache.struts2.convention.annotation.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.opensymphony.xwork2.ActionContext;
+import com.pzy.entity.Family;
 import com.pzy.entity.Worker;
 import com.pzy.entity.WorkerToAction;
 import com.pzy.service.WorkerService;
@@ -25,6 +26,8 @@ public class CenterAction extends PageAction {
 	
 	private List<WorkerToAction>  workerToActions;
 	
+	private List<Family> familys;
+
 	private Worker worker;
 	@Autowired
 	private WorkerService workerService;
@@ -34,6 +37,7 @@ public class CenterAction extends PageAction {
 	public String center() {
 		Worker user=(Worker)ActionContext.getContext().getSession().get("user");
 		workerToActions=workerToActionService.findByWorker(user);
+		familys=workerService.findByWorker(user);
 		return SUCCESS;
 	}
 	
@@ -68,5 +72,12 @@ public class CenterAction extends PageAction {
 
 	public void setTip(String tip) {
 		this.tip = tip;
+	}
+	public List<Family> getFamilys() {
+		return familys;
+	}
+
+	public void setFamilys(List<Family> familys) {
+		this.familys = familys;
 	}
 }

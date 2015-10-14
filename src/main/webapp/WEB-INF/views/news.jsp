@@ -8,7 +8,7 @@
 <script language="javaScript" type="text/javascript" src="js/jquery.js" ></script>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 <link type="text/css" rel="stylesheet" href="css/pagination_new.css" />
-		<title>无锡商院大学生青年志愿者总会</title>
+		<title></title>
 		<link type="text/css" rel="stylesheet" href="pagination_new.css"  />
 		<script type="text/javascript">
 			$(document).ready(function(){
